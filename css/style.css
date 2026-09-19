@@ -61,7 +61,8 @@ body {
 
 /* ===== 主内容容器 ===== */
 #container {
-    max-width: 800px;
+    width: 80%;
+    max-width: 1200px;
     margin: -20px auto 40px;  /* 向上覆盖一点，实现重叠效果 */
     padding: 0 20px;
     position: relative;
