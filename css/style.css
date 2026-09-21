@@ -132,10 +132,21 @@ input[type="search"] {
     border-bottom: 1px solid #eee;
 }
 
-/* ===== 文章内容 ===== */
+/* 文章主体内容，限制内层宽度 */
 .post-content {
-    font-size: 1.05em;
-    line-height: 1.8;
+  width: 100%;
+  text-indent: 2em;
+  overflow-wrap: break-word;
+  word-break: normal;
+  font-size: 1.05em;
+  line-height: 1.8;
+  box-sizing: border-box;
+}
+/* 排除：代码块、引用块、列表内的p，不让它们也缩进 */
+.post-content pre p,
+.post-content blockquote p,
+.post-content li p {
+    text-indent: 0;
 }
 
 .post-content img {
