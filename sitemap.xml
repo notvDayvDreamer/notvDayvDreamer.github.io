@@ -1,42 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+  <% for (const post of posts) { %>
   <url>
-    <loc>https://shu-heng.top/2026/09/21/%E6%97%A0%E9%A2%98/</loc>
-    
-    <lastmod>2026-09-21</lastmod>
-    
+    <loc><%= post.permalink %></loc>
+    <lastmod><%= post.updated.format('YYYY-MM-DD') %></lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-  <url>
-    <loc>https://shu-heng.top/2026/08/29/my-first-blog/</loc>
-    
-    <lastmod>2026-09-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://shu-heng.top/2026/08/29/hello-world/</loc>
-    
-    <lastmod>2026-08-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-
-  <url>
-    <loc>https://shu-heng.top/</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  
-
-  
+  <% } %>
 </urlset>
