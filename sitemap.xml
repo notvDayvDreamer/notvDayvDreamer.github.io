@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <% for (const post of posts) { %>
+<%
+const posts = site.posts.sort('-updated');
+posts.forEach(function(post){
+%>
   <url>
     <loc><%= post.permalink %></loc>
     <lastmod><%= post.updated.format('YYYY-MM-DD') %></lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <% } %>
+<% }) %>
+<% const home = site.get('page', '/'); %>
+  <url>
+    <loc><%= home.permalink %></loc>
+    <lastmod><%= home.updated.format('YYYY-MM-DD') %></lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>
